@@ -1,0 +1,755 @@
+html,body{
+	height: 100%;
+}
+body{
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.main{
+	position: relative;
+	height: 100%;
+}
+.top{
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4.39rem;
+	height: 2.79rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/guize.png) no-repeat;
+	background-size: 100% 100%;
+}
+.top > a{
+	position: absolute;
+	width: 1.02rem;
+	height: 0.8rem;
+}
+.top > a:nth-child(1){
+	top: 1.14rem;
+	left: 0.18rem;
+}
+.top > a:nth-child(2){
+	top: 1.02rem;
+	left: 3.37rem;
+}
+
+.tian{
+	position: absolute;
+	top: 50%;
+	margin-top: -3.36rem;
+	width: 100%;
+	height: 6.72rem;
+	padding-top: 1.96rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/wu.png) no-repeat center top;
+	background-size: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tian > .wawa{
+	position: absolute;
+	top: 0.4rem;
+	left: 2.66rem;
+	width: 0.99rem;
+	height: 1.2rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/wawa.png) no-repeat;
+	background-size: 100% 100%;
+	-webkit-animation:bounce 1s .2s ease both infinite;
+	animation:bounce 1s .2s ease both infinite;
+}
+.tian > .tian-m{
+	position: relative;
+}
+.tian > .tian-m > li{
+	position: absolute;
+	width: 2.02rem;
+	height: 1.01rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/di.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.tian > .tian-m > li:nth-child(1){
+	top: 0;
+	left: 1.59rem;
+}
+.tian > .tian-m > li:nth-child(2){
+	top: 0.62rem;
+	left: 2.96rem;
+}
+.tian > .tian-m > li:nth-child(3){
+	top: 1.22rem;
+	right: 0.05rem;
+}
+.tian > .tian-m > li:nth-child(4){
+	top: 0.59rem;
+	left: 0.24rem;
+}
+.tian > .tian-m > li:nth-child(5){
+	top: 1.22rem;
+	left: 1.52rem;
+}
+.tian > .tian-m > li:nth-child(6){
+	top: 1.83rem;
+	left: 2.81rem;
+}
+.tian > .tian-m > li:nth-child(7){
+	top: 2.42rem;
+	right: 0.28rem;
+}
+.tian > .tian-m > li:nth-child(8){
+	top: 1.83rem;
+	left: 0.08rem;
+}
+.tian > .tian-m > li:nth-child(9){
+	top: 2.45rem;
+	left: 1.5rem;
+}
+.tian > .tian-m > li:nth-child(10){
+	top: 3.1rem;
+	left: 2.94rem;
+}
+
+.tian > .tian-m > li > span{
+	position: absolute;
+	top: 0.04rem;
+	left: 0.1rem;
+	width: 1.88rem;
+	height: 0.92rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/di2.png) no-repeat;
+	background-size: 100% 100%;
+}
+.tian > .tian-m > li.active > span{
+	display: none;
+}
+.tian-m li.active .numji-1,.tian-m li.active .numji-2{
+	position: absolute;
+	top: -0.3rem;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 0.61rem 0;
+	background-size: 1.11rem 0.94rem;
+
+	-webkit-animation:wobble 1s .2s ease both infinite;
+	animation:wobble 1s .2s ease both infinite;
+}
+.tian-m li.active:nth-child(1) > i{
+	-webkit-animation-delay: -0.2s;
+	animation-delay: -0.2s;
+}
+.tian-m li.active:nth-child(2) > i{
+	-webkit-animation-delay: -0.4s;
+	animation-delay: -0.4s;
+}
+.tian-m li.active:nth-child(3) > i{
+	-webkit-animation-delay: -0.6s;
+	animation-delay: -0.6s;
+}
+.tian-m li.active:nth-child(4) > i{
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+}
+.tian-m li.active:nth-child(5) > i{
+	-webkit-animation-delay: -1s;
+	animation-delay: -1s;
+}
+.tian-m li.active:nth-child(6) > i{
+	-webkit-animation-delay: -1.2s;
+	animation-delay: -1.2s;
+}
+.tian-m li.active:nth-child(7) > i{
+	-webkit-animation-delay: -1.4s;
+	animation-delay: -1.4s;
+}
+.tian-m li.active:nth-child(8) > i{
+	-webkit-animation-delay: -1.6s;
+	animation-delay: -1.6s;
+}
+.tian-m li.active:nth-child(9) > i{
+	-webkit-animation-delay: -1.8s;
+	animation-delay: -1.8s;
+}
+.tian-m li.active:nth-child(10) > i{
+	-webkit-animation-delay: -2s;
+	animation-delay: -2s;
+}
+
+
+.tian-m li.active .numji-1{
+	background-position: 0.5rem 0;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/one_ji.png);
+}
+.tian-m li.active .numji-2{
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/two_ji.png);
+}
+.tian-m li.active .numji-1 > i,
+.tian-m li.active .numji-2 > i{
+	position: absolute;
+	top: 0.56rem;
+	left: 0.51rem;
+	width: 1.16rem;
+	height: 0.42rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/jiwo.png) no-repeat;
+	background-size: 100% 100%;
+}
+.tian-m li.active em{
+	display: none;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.tian-m li.active em.active{
+	display: block;
+}
+.tian-m li.active em:nth-of-type(2){
+	left: 0.42rem;
+	top: -0.46rem;
+	width: 0.62rem;
+	height: 0.46rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/dan_l.png);
+}
+.tian-m li.active em:nth-of-type(1){
+	left: 1.11rem;
+	top: -0.48rem;
+	width: 0.64rem;
+	height: 0.48rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/dan_r.png);
+}
+.tian-m li.active em:nth-of-type(1):last-of-type{
+	left: 0.9rem;
+}
+
+.tian > .gril{
+	position: absolute;
+	top: 5.39rem;
+	left: 4.63rem;
+	width: 0.98rem;
+	height: 1.33rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/gril.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.menu{
+	position: absolute;
+	top: 50%;
+	left: 0.08rem;
+	margin-top: -2.09rem;
+	width: 0.96rem;
+	height: 4.18rem;
+	padding: 0.18rem 0;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/menu.png) no-repeat;
+	background-size: 100% 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.menu > a{
+	display: block;
+	width: 100%;
+	margin-bottom: 0.06rem;
+}
+.menu > a > p{
+	height: 0.2rem;
+	line-height: 0.2rem;
+	font-size: 0.14rem;
+	color: #be100d;
+	text-align: center;
+}
+.menu > a > i{
+	display: block;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.menu > a:nth-child(2) > i{
+	height: 0.57rem;
+	background-size: 0.54rem 0.55rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/s_ji.png);
+}
+.menu > a:nth-child(1) > i{
+	height: 0.52rem;
+	background-size: 0.4rem 0.5rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/s_dan.png);
+}
+.menu > a:nth-child(3) > i{
+	height: 0.39rem;
+	background-size: 0.63rem 0.37rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/s_di.png);
+}
+.menu > a:nth-child(4) > i{
+	height: 0.47rem;
+	background-size: 0.53rem 0.45rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/bao.png);
+}
+.menu > a:nth-child(5) > i{
+	height: 0.43rem;
+	background-size: 0.65rem 0.41rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/bag.png);
+}
+
+.c-ad > i{
+	position: absolute;
+	bottom: 0;
+	left: 0.08rem;
+	width: 3.37rem;
+	height: 2.69rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/cai.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/*弹窗*/
+.hide{
+	display: none;
+}
+.t-mask{
+	z-index: 990;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5)
+}
+.t-success,
+.t-error{
+	z-index: 1000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -1.42rem;
+	width: 2.83rem;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	font-size: 0.24rem;
+	line-height: 0.3rem;
+	color: #b20814;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-animation:bounceIn 0.5s 0s ease both;
+	animation:bounceIn 0.5s 0s ease both;
+}
+.t-success{
+	margin-top: -0.96rem;
+	height: 1.91rem;
+	padding-top: 0.74rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/success-a.png);
+}
+.t-error{
+	margin-top: -1.48rem;
+	height: 2.72rem;
+	padding-top: 1.53rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/error-a.png);
+}
+.t-success > p,
+.t-error > p{
+	margin: 0 auto;
+	width: 2.52rem;
+}
+.t-success > a,
+.t-error > a{
+	position: absolute;
+	bottom: 0.15rem;
+	left: 50%;
+	margin-left: -0.5rem;
+	width: 0.99rem;
+	height: 0.34rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/que.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.menu-close{
+	position: absolute;
+	top: 0.07rem;
+	left: 3.03rem;
+	width: 0.44rem;
+	height: 0.44rem;
+}
+.menu-cz-mask{
+	z-index: 990;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.menu-cz{
+	display: none;
+	z-index: 1000;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin-top: -1.87rem;
+	height: 3.73rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/show-z.png) no-repeat;
+	background-size: 100% 100%;
+}
+.menu-cz.active{
+	display: block;
+	-webkit-animation:bounceIn 0.8s .2s ease both;
+	animation:bounceIn 0.8s .2s ease both;
+}
+.menu-cz .menu-nav > a{
+	position: absolute;
+	left: 4.87rem;
+	width: 1.06rem;
+	height: 0.32rem;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.menu-cz .menu-nav > a:nth-child(1){
+	top: 2.61rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/cz-btn1.png);
+}
+.menu-cz .menu-nav > a.active:nth-child(1){
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/cz-btn2.png);
+}
+.menu-cz .menu-nav > a:nth-child(2){
+	top: 2.98rem;
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/tx-btn1.png);
+}
+.menu-cz .menu-nav > a.active:nth-child(2){
+	background-image: url(http://h5.91marryu.com/onechicken/public/home/images/tx-btn2.png);
+}
+.menu-alldan{
+	position: absolute;
+	top: 2.31rem;
+	left: 1.8rem;
+	width: 1.45rem;
+	height: 0.58rem;
+	padding-top: 0.4rem;
+	line-height: 0.37rem;
+	color: #ffd314;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 0.22rem;
+	text-indent: -0.1rem;
+	background:#a51f24 url(http://h5.91marryu.com/onechicken/public/home/images/s-dan.png) 0.98rem 0.45rem no-repeat;
+	background-size: 0.22rem;
+}
+.menu-z-all{
+	position: absolute;
+	top: 1.98rem;
+	left: 2.21rem;
+	width: 0.61rem;
+	height: 0.57rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/z-all.png) no-repeat;
+	background-size: 100% 100%;
+}
+.menu-fill{
+	position: absolute;
+	top: 2.64rem;
+	left: 3.78rem;
+	width: 1.04rem;
+	height: 0.64rem;
+	padding: 0.1rem 0.2rem;
+	line-height: 0.44rem;
+	color: #ffd314;
+	background-color: #a51f24;
+	border-radius: 3px;
+	font-size: 0.22rem;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	cursor: none;
+	border: none;
+}
+
+
+.tuijian{
+	z-index: 1100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.9) url(http://h5.91marryu.com/onechicken/public/home/images/tuijian.png) no-repeat center 0.42rem;
+	background-size: 5.88rem;
+}
+.tuijian-f{
+	position: absolute;
+	top: 4.12rem;
+	left: 1.25rem;
+	width: 4.1rem;
+}
+.tuijian-f > li{
+	float: left;
+	width: 0.79rem;
+	margin-right: 0.3rem;
+}
+.tuijian-f > li:nth-child(4n){
+	margin-right: 0;
+}
+.tuijian-f > li img{
+	display: block;
+	height: 0.79rem;
+}
+.tuijian-f > li p{
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	height: 0.34rem;
+	line-height: 0.34rem;
+	font-size: 0.2rem;
+	color: #c2000c;
+	text-align: center;
+}
+
+[v-cloak]{
+	display: none;
+}
+.show{
+	display: block;
+}
+.z-guize-mask{
+	z-index: 800;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.z-guize{
+	z-index: 900;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 6.27rem;
+	height: 9.02rem;
+	margin-left: -3.1rem;
+	margin-top: -4.51rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/z-guize.png) no-repeat center center;
+	background-size: 100% 100%;
+	-webkit-transform: translate3d(0,-200%,0);
+	transform: translate3d(0,-200%,0);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+.z-guize.active{
+	
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.z-guize > .z-guize-btn{
+	position: absolute;
+	bottom: 0.55rem;
+	left: 50%;
+	margin-left: -1.56rem;
+	width: 3.13rem;
+	height: 0.83rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/z-btn.png) no-repeat;
+	background-size: 100% 100%;
+}
+.z-guize-con{
+	padding-top: 1.65rem;
+	margin-left: 0.7rem;
+	width: 4.7rem;
+	font-size: 0.24rem;
+	line-height: 0.37rem;
+	text-align: justify;
+	color: #6b2a0e;
+}
+
+
+
+@-webkit-keyframes bounceIn{
+0%{opacity:0;
+-webkit-transform:scale(.3)}
+50%{opacity:1;
+-webkit-transform:scale(1.02)}
+70%{-webkit-transform:scale(.95)}
+100%{-webkit-transform:scale(1)}
+}
+@keyframes bounceIn{
+0%{opacity:0;
+transform:scale(.3)}
+50%{opacity:1;
+transform:scale(1.02)}
+70%{transform:scale(.95)}
+100%{transform:scale(1)}
+}
+
+@-webkit-keyframes bounce{
+0%,20%,50%,80%,100%{-webkit-transform:translateY(0)}
+40%{-webkit-transform:translateY(-30px)}
+60%{-webkit-transform:translateY(-15px)}
+}
+@keyframes bounce{
+0%,20%,50%,80%,100%{transform:translateY(0)}
+40%{transform:translateY(-30px)}
+60%{transform:translateY(-15px)}
+}
+
+@-webkit-keyframes wobble{
+0%{-webkit-transform:translateX(0%)}
+15%{-webkit-transform:translateX(-5%) rotate(-3deg)}
+30%{-webkit-transform:translateX(4%) rotate(3deg)}
+45%{-webkit-transform:translateX(-3%) rotate(-2deg)}
+60%{-webkit-transform:translateX(2%) rotate(2deg)}
+75%{-webkit-transform:translateX(-1%) rotate(-1deg)}
+100%{-webkit-transform:translateX(0%)}
+}
+@keyframes wobble{
+0%{transform:translateX(0%)}
+15%{transform:translateX(-5%) rotate(-3deg)}
+30%{transform:translateX(4%) rotate(3deg)}
+45%{transform:translateX(-3%) rotate(-2deg)}
+60%{transform:translateX(2%) rotate(2deg)}
+75%{transform:translateX(-1%) rotate(-1deg)}
+100%{transform:translateX(0%)}
+}
+
+
+.s_input-mask{
+	z-index: 990;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.8);
+}
+.s_input{
+	z-index: 1000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 4.49rem;
+	height: 4.05rem;
+	margin-left: -2.25rem;
+	margin-top: -2.03rem;
+	padding-top: 0.7rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/input_bg.png) no-repeat;
+	background-size: 100% 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.s_input > input{
+	display: block;
+	width: 2.89rem;
+	height: 0.33rem;
+	line-height: 0.33rem;
+	margin-left: 0.85rem;
+	padding: 0;
+	padding-left: 0.68rem;
+	color: #000;
+	font-size: 0.16rem;
+	background: #fff url(http://h5.91marryu.com/onechicken/public/home/images/s_input.png) no-repeat;
+	background-size: 0.55rem 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 0.27rem;
+	border: none;
+}
+.s_input > a{
+	display: block;
+	width: 1.14rem;
+	height: 0.33rem;
+	margin-left: 1.74rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/s_input_btn.png) no-repeat;
+	background-size: 100%;
+}
+.s_close{
+	position: absolute;
+	left: 50%;
+	top: -0.11rem;
+	margin-left: -0.33rem;
+	width: 0.66rem;
+	height: 0.66rem;
+	background: url(http://h5.91marryu.com/onechicken/public/home/images/addclose.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 加载中 start*/
+@-webkit-keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-forever {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner-mask{
+	z-index: 1800; 
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.loading-spinner {
+	z-index: 2000; 
+  -webkit-animation-duration: 0.75s;
+  -moz-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: rotate-forever;
+  -moz-animation-name: rotate-forever;
+  animation-name: rotate-forever;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+  height: 30px;
+  width: 30px;
+  border: 3px solid #ffffff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  margin: -15px 0 -15px;
+}
+
+/* 加载中 end */

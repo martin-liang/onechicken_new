@@ -1,0 +1,17 @@
+
+注意，注意
+demo仅供参考，具体接口开发，请按照接口文档要求进行
+
+1.运行demo前请先填写IpsPay.Config文件中如下的MerCode，Account，MerCert的值，否则程序将无法运行
+ //商戶號
+$ipspay_config['MerCode']	 = '';   //IPS为商户开通的6位数号码
+//交易賬戶號
+$ipspay_config['Account']	 = '';   //登录商户后台-->账户管理-->账户资料-->交易账户-->交易账号
+//商戶證書
+$ipspay_config['MerCert']	 = '';   //下载步骤：商户后台-->商户设置-->商户服务-->MD5证书--> 下载
+
+2.如下两个接收地址请改成商户实际的接收地址路径，否则无法接收返回数据。
+//服务器S2S通知页面路径
+$ipspay_config['S2Snotify_url'] = "http://192.168.12.72:8080/IpsWBPay/wxonline-result.php";
+//页面跳转同步通知页面路径
+$ipspay_config['return_url'] = "http://192.168.12.72:8080/IpsWBPay/wxonline-result-show.php";
