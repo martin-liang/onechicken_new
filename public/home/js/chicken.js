@@ -14,7 +14,7 @@ if (!/MicroMessenger/i.test(navigator.userAgent)) {
 if (!userid) {
 	window.location.reload();
 }
-addCookie("user_id",userid);
+addCookie("userid",userid);
 
 new Vue({
 	el: "#chicken",
