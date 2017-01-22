@@ -136,7 +136,7 @@ class Api extends MY_Controller {
 //            $data['money']=1;
 //            $data['order_num']=1;
             /*反写*/
-            $sq = "select * from top_up WHERE `ips_num` = "."'".$data['ips_num']."'";
+            $sq = "select * from top_up WHERE `ips_num` != '' AND `ips_num` = "."'".$data['ips_num']."'";
             $sqInfo = $this->topup_model->querySql($sq);
             $sqInfo = $sqInfo[0];
             if($sqInfo)
@@ -208,12 +208,20 @@ class Api extends MY_Controller {
             $return['message'] = $data['WxPayRsp']['head']['RspCode'];
             $return['order_num'] = $return['MerBillno'];
             $return['money'] = $return['OrdAmt'];
-            $return['ips_num'] = $return['IpsBillNo'];
+            $return['ips_num'] = $return['IpsBillno'];
 
             return $return;
 
         }
     }
+
+	public function test ()
+	{
+            $data = $this->_addTopUp();
+           
+
+		var_dump($data);
+	}
 
     function xml_to_array($xml)
     {
