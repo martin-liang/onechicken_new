@@ -96,8 +96,8 @@
 
 
     <div @click="is_tx=false" :class="['s_input-mask',is_tx?'':'hide']"></div>
-    <div @click="is_tx=false" :class="['s_input',is_tx?'':'hide']">
-        <span class="s_close"></span>
+    <div :class="['s_input',is_tx?'':'hide']">
+        <span @click="is_tx=false" class="s_close"></span>
         <input placeholder="请输入提款金额" v-model="t_money" type="tel" />
         <input placeholder="请输入姓名" v-model="tx_name" type="text" />
         <input placeholder="请输入联系方式" v-model="tx_tel" type="tel" />

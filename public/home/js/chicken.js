@@ -4,9 +4,9 @@
  * 
  */
 
-var userid = getCookie("user_id") || getCookie("userid");
-var qian = window.location.hash;
+var userid = getUrlData("user_id");
 
+var qian = window.location.hash;
 if (!/MicroMessenger/i.test(navigator.userAgent)) {
 	window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf691fb1f4059c9f3&redirect_uri=http://www.sqweichao.com/index.php/wechat/getcode&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect";
 }
@@ -14,7 +14,7 @@ if (!/MicroMessenger/i.test(navigator.userAgent)) {
 if (!userid) {
 	window.location.reload();
 }
-
+addCookie("user_id",userid);
 
 new Vue({
 	el: "#chicken",
@@ -387,4 +387,26 @@ function getUrlData(name){
     var json = getLocationSearch();
     var str = json[name] || '';
     return str
+}
+
+function addCookie(name, value, expiresDays){ 
+    var cookieString = name + "=" + value; 
+
+    //判断是否设置过期时间 
+    if(expiresDays > 0) { 
+        var date = new Date(); 
+        date.setTime(date.getTime() + expiresDays * 24 * 3600 * 1000); 
+        cookieString = cookieString + "; expires=" + date.toGMTString(); 
+    }
+    document.cookie = cookieString + '; path=/'; 
+}
+function getCookie(name){ 
+    var strCookie = document.cookie; 
+    var arrCookie = strCookie.split("; "); 
+
+    for(var i = 0;i < arrCookie.length;i++){ 
+        var arr = arrCookie[i].split("="); 
+        if(arr[0] == name) return arr[1]; 
+    }
+    return ""; 
 }
