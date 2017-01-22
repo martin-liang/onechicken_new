@@ -149,7 +149,7 @@ class Api extends MY_Controller {
             if($info){
                 $money = $data['money'];
                 $sql = "update chicken_wechat_user set top_up = top_up+$money WHERE id = ".$orderInfo['wu_id'];
-                $sql2 = "update user_addition set total_eggs = total_eggs+$money WHERE id = ".$orderInfo['wu_id'];
+                $sql2 = "update user_addition set total_eggs = total_eggs+$money WHERE user_id = ".$orderInfo['wu_id'];
                 $this->topup_model->addExtract($sql);
                 $this->topup_model->addExtract($sql2);
             }

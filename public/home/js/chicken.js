@@ -100,7 +100,9 @@ new Vue({
 				_this.recommand_list = data.recommand_list.slice(0,8);
 				
 				
-				if (_this.j_data.friend > 0) {
+				var friend_a = getCookie("friend_a");
+				if (!friend_a && _this.j_data.friend > 0) {
+					addCookie("friend_a",_this.j_data.friend,0.5);
 					_this.show_msg(1,'通过你的小伙伴分享，你已获得了'+_this.j_data.friend+'个蛋。');
 					_this.j_data.dan += _this.j_data.friend;
 					_this.j_data.friend = 0;

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: hemuhan
@@ -276,8 +276,8 @@ class User_model extends CI_Model {
             die('今天已经运行过生蛋任务');
         }
         $this->db->trans_begin();
-        $this->db->query("update chicken set no_get_eggs = no_get_eggs + 5 , total_eggs = total_eggs + 5 where is_dead = 0 and total_eggs < 150  and no_get_eggs = 0 ");
-        $this->db->query("update chicken set is_dead = 2 where is_dead = 0 and total_eggs >= 150");
+        $this->db->query("update chicken set no_get_eggs = no_get_eggs + 5 , total_eggs = total_eggs + 5 where is_dead = 0 and total_eggs < 200 and no_get_eggs = 0 ");
+        $this->db->query("update chicken set is_dead = 2 where is_dead = 0 and total_eggs >= 200");
 
         //先更新所有今天获取推荐的蛋的数量为0,将昨天获取推荐的蛋的数量+到总数上
         $this->db->query("update user_addition set  recommand_eggs = 0");

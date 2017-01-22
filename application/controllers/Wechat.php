@@ -21,16 +21,20 @@ class wechat extends CI_Controller
         session_start();
         if($_SESSION['user_id'])
         {
-            header("Location:http://www.sqweichao.com/index.php/wechat/game?user_id=".$_SESSION['user_id']);
-            exit;
+            session_destroy();
+            setcookie('user_id',$_SESSION['user_id'],time()-1800);
+//            header("Location:http://www.sqweichao.com/index.php/wechat/game?user_id=".$_SESSION['user_id']);
+//            exit;
         }
-
 
         if($_COOKIE['user_id'])
         {
-            header("Location:http://www.sqweichao.com/index.php/wechat/game?user_id=" . $_COOKIE['user_id']);
-            exit;
+            setcookie('user_id',$_COOKIE['user_id'],time()-1800);
+            $link = 'http://' . $_SERVER['HTTP_HOST']. $_SERVER['REQUEST_URI'];
+            $this->token_model->_getCode($link);
         }
+
+
 
         $recommand_code = $_GET['recommand_code'];
         $userid = $_GET['userid'];
@@ -54,8 +58,8 @@ class wechat extends CI_Controller
             $data = $this->token_model->getWeChatOpenId($_GET['code'],$recommand_code,$parent_id);
             if($data) {
                 $userinfo= $this->token_model->getWuId($data['wechat_id']);
-                setcookie('user_id',$userinfo['id']);
-                $_SESSION['user_id'] = $userinfo['id'];
+//                setcookie('user_id',$userinfo['id']);
+//                $_SESSION['user_id'] = $userinfo['id'];
                 header("Location:http://www.sqweichao.com/index.php/wechat/game?user_id=".$userinfo['id']);
                 exit;
             }
@@ -73,16 +77,13 @@ class wechat extends CI_Controller
 
    public function game()
     {
-        if($_GET['user_id'])
-            setcookie('user_id',$_GET['user_id']);
+//        if($_GET['user_id'])
+//            setcookie('user_id',$_GET['user_id']);
 
         if($_GET['user_id']){
             $userId = $_GET['user_id'];
         }elseif ($_COOKIE['user_id']){
             $userId = $_COOKIE['user_id'];
-        }elseif ($_SESSION['user_id'])
-        {
-            $userId = $_SESSION['user_id'];
         }else{
             header("Location:http://www.sqweichao.com/index.php/wechat/getcode");
             exit;
