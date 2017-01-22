@@ -56,20 +56,34 @@ class token_model extends CI_Model
             'parent_id'=>$parent_id,
         ];
 
-				$info = $this->db->query("select * from chicken_wechat_user where wechat_id = ?",[$userInfo['openid']])->row_array();
+        $info = $this->db->query("select * from chicken_wechat_user where wechat_id = ?",[$userInfo['openid']])->row_array();
+
         if($info)
             return $info;
 
 
         $this->db->insert('chicken_wechat_user',$saveData);
 
-        usleep(50000);
+        usleep(5000);
+
 
         $info = $this->db->query("select * from chicken_wechat_user where wechat_id = ?",[$userInfo['openid']])->row_array();
-        
-        $parentInfo = $this->db->query("select * from chicken_wechat_user where id = ?",[$info['id']])->row_array();
 
-        $this->writeResult($parentInfo['id'],$parentInfo['parent_id'],$parentInfo['recommand_code']);
+
+        /*查找推荐人信息*/
+        $parentInfo = $this->db->query("select * from chicken_wechat_user where recommand_code = ?",[$recommand_code])->row_array();
+
+        $pid = $parentInfo['id'];
+        $sql = "update chicken_wechat_user set `parent_id` = $pid WHERE `recommand_code` = '".$info['recommand_code']."'";
+        $this->db->query($sql);
+
+        $sql1 = "update chicken_wechat_user set `recommand_num` = `recommand_num`+1  WHERE `recommand_code` = '"."$recommand_code"."'";
+        $this->db->query($sql1);
+
+
+
+
+        $this->writeResult($info['id'],$parentInfo['parent_id'],$parentInfo['recommand_code']);
 
 
 

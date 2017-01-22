@@ -25,6 +25,13 @@ class wechat extends CI_Controller
             exit;
         }
 
+
+        if($_COOKIE['user_id'])
+        {
+            header("Location:http://www.sqweichao.com/index.php/wechat/game?user_id=" . $_COOKIE['user_id']);
+            exit;
+        }
+
         $recommand_code = $_GET['recommand_code'];
         $userid = $_GET['userid'];
         $parent_id = 0;
@@ -45,12 +52,6 @@ class wechat extends CI_Controller
             }
 
             $data = $this->token_model->getWeChatOpenId($_GET['code'],$recommand_code,$parent_id);
-            if($_COOKIE['user_id'])
-            {
-                header("Location:http://www.sqweichao.com/index.php/wechat/game?user_id=" . $_COOKIE['user_id']);
-                exit;
-            }
-
             if($data) {
                 $userinfo= $this->token_model->getWuId($data['wechat_id']);
                 setcookie('user_id',$userinfo['id']);

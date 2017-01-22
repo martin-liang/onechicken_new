@@ -53,7 +53,7 @@ class User_model extends CI_Model {
      * @return Array
      */
     public function recommands($userid){
-        $result = $this->db->query("select cw.id,cw.nickname,cw.headimgurl from chicken_wechat_user as cw inner join user_addition as ua on ua.user_id = cw.id where ua.recommand = ? ",[$userid]);
+        $result = $this->db->query("select cw.id,cw.nickname,cw.headimgurl from chicken_wechat_user as cw inner join user_addition as ua on ua.user_id = cw.id where cw.parent_id = ? ",[$userid]);
         return $result->result_array();
 
     }

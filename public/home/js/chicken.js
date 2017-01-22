@@ -7,9 +7,14 @@
 var userid = getCookie("user_id") || getCookie("userid");
 var qian = window.location.hash;
 
+if (!/MicroMessenger/i.test(navigator.userAgent)) {
+	window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf691fb1f4059c9f3&redirect_uri=http://www.sqweichao.com/index.php/wechat/getcode&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect";
+}
+
 if (!userid) {
 	window.location.reload();
 }
+
 
 new Vue({
 	el: "#chicken",
